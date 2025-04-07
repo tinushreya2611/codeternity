@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shreya Singh Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+      animation: fadeIn 2s ease;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #fff;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 1rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      animation: slideIn 2s ease;
+    }
+
+    .profile-photo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .profile-photo img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #fda085;
+    }
+
+    .about-me {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .about-me h2 {
+      color: #f76b1c;
+    }
+
+    .about-me p, .skills ul, .email-section p {
+      font-size: 1rem;
+    }
+
+    .skills ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .skills li {
+      background-color: #f76b1c;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      transition: transform 0.3s;
+    }
+
+    .skills li:hover {
+      transform: scale(1.1);
+    }
+
+    .email-section {
+      text-align: center;
+      padding: 2rem;
+      background-color: #fff3e6;
+      border-radius: 1rem;
+      margin: 2rem auto;
+      max-width: 800px;
+      animation: fadeIn 3s ease;
+    }
+
+    .email-section h3 {
+      color: #f76b1c;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes slideIn {
+      from {opacity: 0; transform: translateX(-50px);}
+      to {opacity: 1; transform: translateX(0);}
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #f76b1c;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hi, I'm Shreya Singh</h1>
+  </header>
+
+  <section class="container">
+    <div class="profile-photo">
+      <img src="my photo.jpeg" alt="Shreya's Profile Photo">
+    </div>
+    <div class="about-me">
+      <h2>About Me</h2>
+      <p>I am a fourth-year B.Tech student with a strong interest in building websites. I enjoy designing beautiful, user-friendly interfaces and bringing ideas to life through code.</p>
+      
+      <div class="skills">
+        <h2>Skills & Interests</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="email-section">
+    <h3>Contact Me</h3>
+    <p>Email: <a href="mailto:singhshreya2611@gmail.com">singhshreya2611@gmail.com</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Shreya Singh. All rights reserved.
+  </footer>
+
+  <script>
+    // Small animation when the page loads
+    window.onload = () => {
+      document.querySelectorAll('li').forEach(li => {
+        li.style.opacity = '0';
+        setTimeout(() => {
+          li.style.transition = 'opacity 0.5s ease';
+          li.style.opacity = '1';
+        }, 1000);
+      });
+    };
+  </script>
+</body>
+</html>
